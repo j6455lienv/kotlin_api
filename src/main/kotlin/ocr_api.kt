@@ -7,12 +7,13 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
+import kotlinx.serialization.json.Json
 import main.kotlin.datas.Course
 import main.kotlin.extensions.get404Error
 
-val course1	= Course(1, "C", "Le master !")
-val course2 = Course(2, "Java", "Trop de longues phrases, ça me fatigue")
-val course3 = Course(3, "Kotlin", "Ca sent bon :)")
+val course1	= Course(1, "C", 5, true)
+val course2 = Course(2, "Java", 2, false)
+val course3 = Course(3, "Kotlin", 2, true)
 
 fun main(args: Array<String>) {
 	val server = embeddedServer(Netty, 8080) {

@@ -1,3 +1,7 @@
 package main.kotlin.datas
 
-data class Course(val id: Int? = null, val language: String? = null, val value: String? = null)
+data class Course(
+	val id: Int? = null,
+	val titre: String? = null,
+	val level: Int? = null,
+	val isActive: Boolean? = null)
